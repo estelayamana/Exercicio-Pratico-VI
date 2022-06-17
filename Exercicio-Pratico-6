@@ -6,19 +6,13 @@ caso seja de menor "nomeDaPessoa é de maior e tem x anos".
 
 Em seguida chame essa função quatro vezes, passando 3 diferentes dados.*/
 
-const nome1 = prompt("Informe o nome da primeira pessoa");
-   const pessoa1 = parseInt(prompt(nome1 + " Digite sua idade"));
-const nome2 = prompt("Informe o nome da segunda pessoa");
-   const pessoa2 = parseInt(prompt(nome2 + " Digite sua idade"));
-const nome3 = prompt("Informe o nome da terceira pessoa");
-   const pessoa3 = parseInt(prompt(nome3 + " Digite sua idade"));
-
-if (pessoa1 > pessoa2 && pessoa1 > pessoa3) {
-    mostrarTela(pessoa1 + "É mais a mais velha");
+function nomeIdade(nome,idade){
+  if (idade>=18){
+    return (`${nome}, é maior de idade e tem ${idade} anos.`)
+} else{
+  return  (`${nome}, é menor de idade e tem ${idade} anos.`)
 }
-if (pessoa2 > pessoa1 && pessoa2 > pessoa3) {
-    mostrarTela(pessoa2 + "É mais a mais velha");
 }
-if (pessoa3 > pessoa1 && pessoa3 > pessoa2) {
-    mostrarTela(pessoa3 + "É mais a mais velha");
-}
+console.log(nomeIdade('Marco',42));
+console.log(nomeIdade('Maria',63));
+console.log(nomeIdade('Archie',1));
